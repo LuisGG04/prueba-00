@@ -8,6 +8,11 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
     <!-- Google Font NUNITO-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -18,60 +23,69 @@
 </head>
 <body>
 
-    <header>
+    <header class="card bg-dark text-white">
 
-        <nav class="navbar">
-            <ul class="navbar__list">
-                <li class="navbar__item">
-                    <a href="#" class="navbar__link">Home</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#" class="navbar__link">About</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#" class="navbar__link">Projects</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#" class="navbar__link">Contact</a>
-                </li>
-            </ul>
-        </nav>
+        <img src="./img/example-arquitec.jpg" alt="example-arquitec" class="card-img bg-image">
+        <div class="card-img-overlay">
+
+            <nav class="navbar d-inline-flex justify-content-center fixed-top">
+                <ul class="nav align-top">
+                    <li class="nav-item">
+                        <a class="nav-link active link-light" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-light" href="">Proyectos realizados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-light" href="#">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-light" href="">Especializades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-light" href="">Comunícate</a>
+                    </li>
+                </ul>
+            </nav>
+        
+            <div class="social" id="socialSidebar">
+                <ul class="social__list">
+                    <li class="social__item">
+                        <a href="#" class="social__item__link">
+                            <i class="fab fa-facebook-f social__item__logo"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__item__link">
+                            <i class="fab fa-twitter social__item__logo"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__item__link">
+                            <i class="fab fa-instagram social__item__logo"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="social__icon">
+                <i class="fas fa-chevron-right" id="socialIcon"></i>
+            </div>
     
-        <div class="social" id="socialSidebar">
-            <ul class="social__list">
-                <li class="social__item">
-                    <a href="#" class="social__item__link">
-                        <i class="fab fa-facebook-f social__item__logo"></i>
-                    </a>
-                </li>
-                <li class="social__item">
-                    <a href="#" class="social__item__link">
-                        <i class="fab fa-twitter social__item__logo"></i>
-                    </a>
-                </li>
-                <li class="social__item">
-                    <a href="#" class="social__item__link">
-                        <i class="fab fa-instagram social__item__logo"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="social__icon">
-            <i class="fas fa-chevron-right" id="socialIcon"></i>
-        </div>
-
-        <div class="container container-header">
-
-            <div class="principal">
-                <img class="principal__img" src="./img/principal-img.jpeg" alt="Web Design">
-                <div class="principal__text">
-                    <h1 class="principal__text__title">Megard Constructora</h1>
-                    <h3 class="principal__text__subtitle">Lorem ipsum dolor sit amet.</h3>
-                    <p class="principal__text__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, officiis. Doloribus excepturi perferendis error unde deleniti minus deserunt debitis corrupti, ipsum voluptas animi eum in est atque provident placeat adipisci?</p>
-                    <div class="btn">Más información</div>
+            <div class="container container-header">
+    
+                <div class="principal animate__animated animate__slideInUp">
+                    <img class="principal__img" src="./img/magard-logo-exp.jpg" alt="Web Design">
+                    <div class="principal__text">
+                        <h1 class="principal__text__title">Megard Constructora</h1>
+                        <hr>
+                        <p class="principal__text__paragraph">Empresa familiar con más 15 años de experiencia en el ramo de la construcción, especialistas en la edificación y ejecución de proyectos arquitectónicos. Desde cimientos hasta terminados.</p>
+                        <button type="button" class="btn btn-outline-light button-info">Más información</button>
+                    </div>
                 </div>
             </div>
         </div>
+
         
     </header>
 
@@ -79,40 +93,136 @@
 
         <section class="section__projects">
 
+            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-secondary bg-gradient text-white">
+                        <div class="modal-header">
+                            <img class="project__img" src="./img/img.jpeg" alt="Proyecto">
+                        </div>
+                        <div class="modal-body">
+                            Show a second modal and hide this one with the button below.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-secondary bg-gradient text-white">
+                        <div class="modal-header">
+                            <img class="project__img" src="./img/img-1.jpeg" alt="Proyecto">
+                        </div>
+                        <div class="modal-body">
+                            Hide this modal and show the first with the button below.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Open second modal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-secondary bg-gradient text-white">
+                        <div class="modal-header">
+                            <img class="project__img" src="./img/img-2.jpeg" alt="Proyecto">
+                        </div>
+                        <div class="modal-body">
+                            Hide this modal and show the first with the button below.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Back to first</button>
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Open second modal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-secondary bg-gradient text-white">
+                        <div class="modal-header">
+                            <img class="project__img" src="./img/img-3.jpeg" alt="Proyecto">
+                        </div>
+                        <div class="modal-body">
+                            Hide this modal and show the first with the button below.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Back to first</button>
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal">Open second modal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModalToggle5" aria-hidden="true" aria-labelledby="exampleModalToggleLabel5" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-secondary bg-gradient text-white">
+                        <div class="modal-header">
+                            <img class="project__img" src="./img/img-4.jpeg" alt="Proyecto">
+                        </div>
+                        <div class="modal-body">
+                            Hide this modal and show the first with the button below.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Back to first</button>
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle6" data-bs-toggle="modal">Open second modal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModalToggle6" aria-hidden="true" aria-labelledby="exampleModalToggleLabel6" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-secondary bg-gradient text-white">
+                        <div class="modal-header">
+                            <img class="project__img" src="./img/img-5.jpeg" alt="Proyecto">
+                        </div>
+                        <div class="modal-body">
+                            Hide this modal and show the first with the button below.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal">Back to first</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="container container__projects">
     
                 <div class="projects">
                     <h2 class="content__title">Proyectos realizados</h2>
                     <div class="projects__content">
-        
+                        
                         <div class="project">
-                            <img class="project__img" src="./img/img.jpeg" alt="Proyecto">
-                            <!-- <h3 class="project__name">Project 1</h3> -->
+                            <img class="project__img" src="./img/img.jpeg" data-bs-toggle="modal" alt="Proyecto" href="#exampleModalToggle" role="button">
+                        </div>
+
+                        <div class="project">
+                            <img class="project__img" src="./img/img-1.jpeg" data-bs-toggle="modal" alt="Proyecto" href="#exampleModalToggle2" role="button">
                         </div>
         
                         <div class="project">
-                            <img class="project__img" src="./img/img-1.jpeg" alt="Proyecto">
-                            <!-- <h3 class="project__name">Project 2</h3> -->
+                            <img class="project__img" src="./img/img-2.jpeg" data-bs-toggle="modal" alt="Proyecto" href="#exampleModalToggle3" role="button">
                         </div>
         
                         <div class="project">
-                            <img class="project__img" src="./img/img-2.jpeg" alt="Proyecto">
-                            <!-- <h3 class="project__name">Project 3</h3> -->
+                            <img class="project__img" src="./img/img-3.jpeg" data-bs-toggle="modal" alt="Proyecto" href="#exampleModalToggle4" role="button">
                         </div>
         
                         <div class="project">
-                            <img class="project__img" src="./img/img-3.jpeg" alt="Proyecto">
-                            <!-- <h3 class="project__name">Project 4</h3> -->
+                            <img class="project__img" src="./img/img-4.jpeg" data-bs-toggle="modal" alt="Proyecto" href="#exampleModalToggle5" role="button">
                         </div>
         
                         <div class="project">
-                            <img class="project__img" src="./img/img-4.jpeg" alt="Proyecto">
-                            <!-- <h3 class="project__name">Project 5</h3> -->
-                        </div>
-        
-                        <div class="project">
-                            <img class="project__img" src="./img/img-5.jpeg" alt="Proyecto">
-                            <!-- <h3 class="project__name">Project 6</h3> -->
+                            <img class="project__img img-fluid" src="./img/img-5.jpeg" data-bs-toggle="modal" alt="Proyecto" href="#exampleModalToggle6" role="button">
                         </div>
         
                     </div>
@@ -159,89 +269,63 @@
                 </div>
             </div>
 
-            <div class="questions container">
-                <h2 class="subtitle">Especializades</h2>
-                <p class="questions__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit recusandae eum quaerat excepturi! Unde quam dicta corrupti!</p>
-                <section class="questions__container">
-                    <article class="questions__padding">
-                        <div class="questions__answer">
-                            <h3 class="questions__title">Ejemplo 1
-                                <span class="question__arrow">
-                                    <img src="./img/up-arrow.svg" alt="up-arrow" class="questions__img">
-                                </span>
-                            </h3>
-
-                            <div class="question__show">
-                                <img src="./img/img-1.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img-2.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img-3.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img-4.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img-5.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/mockup-img.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/architecture1.jpg" alt="exp" class="question__show--img">
-                                <img src="./img/principal-img.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/architecture2.jpg" alt="exp" class="question__show--img">
-                                <img src="./img/img-6.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img-7.jpeg" alt="exp" class="question__show--img">
-                            </div>
-
-                        </div>
-                    </article>
-    
-                    <article class="questions__padding">
-                        <div class="questions__answer">
-                            <h3 class="questions__title">Ejemplo 2
-                                <span class="question__arrow">
-                                    <img src="./img/up-arrow.svg" alt="up-arrow" class="questions__img">
-                                </span>
-                            </h3>
-    
-                            <div class="question__show">
-                                <img src="./img/img-1.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img-2.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img-3.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img-4.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img-5.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/mockup-img.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/architecture1.jpg" alt="exp" class="question__show--img">
-                                <img src="./img/principal-img.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/architecture2.jpg" alt="exp" class="question__show--img">
-                                <img src="./img/img-6.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img-7.jpeg" alt="exp" class="question__show--img">
-                            </div>
-                        </div>
-                    </article>
-    
-                    <article class="questions__padding">
-                        <div class="questions__answer">
-                            <h3 class="questions__title">Ejemplo 3
-                                <span class="question__arrow">
-                                    <img src="./img/up-arrow.svg" alt="up-arrow" class="questions__img">
-                                </span>
-                            </h3>
-    
-                            <div class="question__show">
-                                <img src="./img/img-1.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img-2.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img-3.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img-4.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img-5.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/mockup-img.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/architecture1.jpg" alt="exp" class="question__show--img">
-                                <img src="./img/principal-img.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/architecture2.jpg" alt="exp" class="question__show--img">
-                                <img src="./img/img-6.jpeg" alt="exp" class="question__show--img">
-                                <img src="./img/img-7.jpeg" alt="exp" class="question__show--img">
-                            </div>
-                        </div>
-                    </article>
-                </section>
-    
-            </div>
         </section>
+
+        <div class="questions">
+            <h2 class="subtitle mt-4">Especializades</h2>
+            <p class="questions__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit recusandae eum quaerat excepturi! Unde quam dicta corrupti!</p>
+            <section class="questions__container">
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">Ejemplo 1
+                            <span class="question__arrow">
+                                <img src="./img/up-arrow.svg" alt="up-arrow" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <div class="question__show">
+                            <img src="./img/img-1.jpeg" alt="exp" class="question__show--img">
+                            <img src="./img/img-5.jpeg" alt="exp" class="question__show--img">
+                            <img src="./img/img-6.jpeg" alt="exp" class="question__show--img">
+                        </div>
+
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">Ejemplo 2
+                            <span class="question__arrow">
+                                <img src="./img/up-arrow.svg" alt="up-arrow" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <div class="question__show">
+                            <img src="./img/img-3.jpeg" alt="exp" class="question__show--img">
+                            <img src="./img/principal-img.jpeg" alt="exp" class="question__show--img">
+                            <img src="./img/img-7.jpeg" alt="exp" class="question__show--img">
+                        </div>
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">Ejemplo 3
+                            <span class="question__arrow">
+                                <img src="./img/up-arrow.svg" alt="up-arrow" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <div class="question__show">
+                            <img src="./img/img-4.jpeg" alt="exp" class="question__show--img">
+                            <img src="./img/architecture1.jpg" alt="exp" class="question__show--img">
+                            <img src="./img/architecture2.jpg" alt="exp" class="question__show--img">
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+        </div>
 
         <section class="testimony">
             <article class="testimony__body">
@@ -271,14 +355,38 @@
                     </form>
             </div>
 
+            <div class="contact__container text-white">
+                <h2 class="contact__subtitle mb-4">Contáctamos</h2>
+                <div class="contact__text">
+                    <h3>info@Megard.com</h3>
+                    <h3>Tel: 5543124312</h3>
+                    <h3>Cel: 5543124312</h3>
+                </div>
+
+                <div class="contact__logo">
+                    <img src="./img/magard-logo-exp.jpg" alt="logo-main" class="contact__img">
+                </div>
+            </div>
         </section>
 
     </main>
 
         <footer class="footer">
-            <h4 class="footer__text">Made with <span><i class="fas fa-coffee"></i></span> in Mexico City <span class="name">Megard Constructora</span></h4>
+            <h4 class="footer__text">Mexico City <span class="name">Megard Constructora</span></h4>
+            <a href="#" class="footer__logo">
+                <i class="fab fa-facebook-f social__item__logo"></i>
+            </a>
+            <a href="#" class="footer__logo">
+                <i class="fab fa-twitter social__item__logo"></i>
+            </a>
+            <a href="#" class="footer__logo">
+                <i class="fab fa-instagram social__item__logo"></i>
+            </a>
         </footer>
 
     <script src="scripts/main.js"></script>
+    <!-- Bootstap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 </html>
